@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atelier Soi（アトリエ ソワ）｜表参道 髪質改善専門サロン</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@300;400&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --white: #FAFAF8;
+      --cream: #F5F0E8;
+      --beige: #E8DDD0;
+      --gold: #C9A96E;
+      --gold-dark: #A8865A;
+      --text: #2C2C2C;
+      --text-light: #6B6B6B;
+      --max-w: 900px;
+    }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Noto Sans JP', sans-serif; background: var(--white); color: var(--text); line-height: 1.8; font-size: 16px; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; }
+
+    header { background: var(--white); padding: 16px 0; position: sticky; top: 0; z-index: 100; border-bottom: 1px solid var(--beige); }
+    header .inner { max-width: var(--max-w); margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Noto Serif JP', serif; font-size: 18px; font-weight: 400; letter-spacing: 3px; }
+    .logo span { display: block; font-size: 10px; letter-spacing: 2px; color: var(--text-light); font-family: 'Noto Sans JP', sans-serif; font-weight: 300; }
+    .header-cta { background: var(--gold); color: white; padding: 10px 20px; font-size: 13px; font-weight: 500; border-radius: 2px; letter-spacing: 1px; transition: background 0.2s; white-space: nowrap; }
+    .header-cta:hover { background: var(--gold-dark); }
+
+    .hero { background: var(--cream); padding: 70px 20px 60px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: linear-gradient(135deg, #F5F0E8 0%, #EDE4D5 100%); }
+    .hero-content { position: relative; z-index: 1; }
+    .hero-badge { display: inline-block; border: 1px solid var(--gold); color: var(--gold); font-size: 11px; letter-spacing: 3px; padding: 6px 20px; margin-bottom: 28px; font-weight: 400; }
+    .hero h1 { font-family: 'Noto Serif JP', serif; font-size: clamp(26px, 5vw, 38px); font-weight: 400; line-height: 1.6; color: var(--text); margin-bottom: 20px; }
+    .hero h1 em { font-style: normal; color: var(--gold-dark); border-bottom: 1px solid var(--gold); padding-bottom: 2px; }
+    .hero-sub { font-size: 14px; color: var(--text-light); margin-bottom: 36px; line-height: 1.9; }
+    .hero-img { width: 100%; max-width: 680px; margin: 0 auto 36px; height: 320px; background: linear-gradient(135deg, #D4C4B0 0%, #C2A882 100%); border-radius: 4px; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.7); font-size: 13px; letter-spacing: 1px; }
+    .cta-btn { display: inline-block; background: var(--gold); color: white; padding: 18px 48px; font-size: 15px; font-weight: 500; letter-spacing: 2px; border-radius: 2px; transition: background 0.2s, transform 0.2s; }
+    .cta-btn:hover { background: var(--gold-dark); transform: translateY(-2px); }
+    .cta-note { font-size: 12px; color: var(--text-light); margin-top: 10px; }
+    .hero-stats { display: flex; justify-content: center; gap: 32px; margin-top: 48px; flex-wrap: wrap; }
+    .stat-item { text-align: center; }
+    .stat-num { font-family: 'Noto Serif JP', serif; font-size: 28px; color: var(--gold-dark); font-weight: 400; }
+    .stat-label { font-size: 11px; color: var(--text-light); letter-spacing: 1px; margin-top: 4px; }
+
+    section { padding: 70px 0; }
+    .section-label { text-align: center; font-size: 11px; letter-spacing: 4px; color: var(--gold); margin-bottom: 10px; font-weight: 400; }
+    .section-title { text-align: center; font-family: 'Noto Serif JP', serif; font-size: clamp(20px, 4vw, 28px); font-weight: 400; line-height: 1.6; margin-bottom: 48px; }
+
+    .problem { background: var(--text); color: white; padding: 70px 0; }
+    .problem .section-label { color: var(--gold); }
+    .problem .section-title { color: white; }
+    .problem-list { list-style: none; max-width: 560px; margin: 0 auto; }
+    .problem-list li { padding: 14px 0 14px 40px; border-bottom: 1px solid rgba(255,255,255,0.1); position: relative; font-size: 15px; color: rgba(255,255,255,0.85); }
+    .problem-list li::before { content: '✓'; position: absolute; left: 10px; color: var(--gold); font-size: 16px; }
+    .problem-list li:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+    .problem-resolve { text-align: center; margin-top: 48px; padding-top: 36px; border-top: 1px solid rgba(255,255,255,0.15); }
+    .problem-resolve p { font-family: 'Noto Serif JP', serif; font-size: 18px; color: white; line-height: 1.8; }
+    .problem-resolve strong { color: var(--gold); }
+
+    .features { background: var(--white); }
+    .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 32px; }
+    .feature-card { text-align: center; padding: 36px 24px; background: var(--cream); border-radius: 4px; border-top: 2px solid var(--gold); }
+    .feature-icon { font-size: 32px; margin-bottom: 16px; }
+    .feature-card h3 { font-family: 'Noto Serif JP', serif; font-size: 16px; font-weight: 400; margin-bottom: 12px; }
+    .feature-card p { font-size: 13px; color: var(--text-light); line-height: 1.8; }
+
+    .menu { background: var(--cream); }
+    .menu-table { width: 100%; border-collapse: collapse; max-width: 680px; margin: 0 auto; }
+    .menu-table th { background: var(--gold); color: white; padding: 14px 20px; font-size: 13px; font-weight: 400; letter-spacing: 2px; text-align: left; }
+    .menu-table td { padding: 16px 20px; border-bottom: 1px solid var(--beige); font-size: 14px; }
+    .menu-table tr:last-child td { border-bottom: none; }
+    .menu-table tr:nth-child(even) td { background: rgba(255,255,255,0.5); }
+    .price { text-align: right; color: var(--gold-dark); font-weight: 500; white-space: nowrap; }
+    .menu-offer { max-width: 680px; margin: 32px auto 0; background: var(--text); color: white; padding: 24px 28px; border-radius: 4px; text-align: center; }
+    .menu-offer h3 { font-size: 14px; letter-spacing: 2px; color: var(--gold); margin-bottom: 10px; }
+    .menu-offer p { font-family: 'Noto Serif JP', serif; font-size: 18px; }
+
+    .voice { background: var(--white); }
+    .voice-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
+    .voice-card { background: var(--cream); padding: 28px 24px; border-radius: 4px; position: relative; }
+    .voice-card::before { content: '"'; position: absolute; top: 10px; left: 18px; font-size: 60px; font-family: 'Noto Serif JP', serif; color: var(--gold); opacity: 0.3; line-height: 1; }
+    .voice-stars { color: var(--gold); font-size: 14px; margin-bottom: 12px; }
+    .voice-text { font-size: 13px; line-height: 1.9; color: var(--text); margin-bottom: 16px; }
+    .voice-author { font-size: 12px; color: var(--text-light); text-align: right; }
+
+    .flow { background: var(--cream); }
+    .flow-steps { display: flex; gap: 0; max-width: 680px; margin: 0 auto; flex-wrap: wrap; }
+    .flow-step { flex: 1; min-width: 180px; text-align: center; position: relative; padding: 0 16px 32px; }
+    .flow-step:not(:last-child)::after { content: '→'; position: absolute; right: -4px; top: 24px; color: var(--gold); font-size: 20px; }
+    .step-num { width: 48px; height: 48px; background: var(--gold); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Noto Serif JP', serif; font-size: 18px; margin: 0 auto 16px; }
+    .step-title { font-size: 14px; font-weight: 500; margin-bottom: 8px; }
+    .step-desc { font-size: 12px; color: var(--text-light); line-height: 1.7; }
+
+    .faq { background: var(--white); }
+    .faq-list { max-width: 680px; margin: 0 auto; }
+    .faq-item { border-bottom: 1px solid var(--beige); padding: 20px 0; }
+    .faq-q { font-size: 14px; font-weight: 500; display: flex; gap: 12px; align-items: flex-start; margin-bottom: 10px; }
+    .faq-q::before { content: 'Q'; color: white; background: var(--gold); min-width: 24px; height: 24px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; flex-shrink: 0; margin-top: 1px; }
+    .faq-a { font-size: 13px; color: var(--text-light); line-height: 1.8; padding-left: 36px; }
+
+    .final-cta { background: linear-gradient(135deg, #2C2C2C 0%, #1a1a1a 100%); padding: 80px 0; text-align: center; color: white; }
+    .final-cta .section-label { color: var(--gold); }
+    .final-cta-title { font-family: 'Noto Serif JP', serif; font-size: clamp(22px, 4vw, 30px); font-weight: 400; line-height: 1.6; margin-bottom: 24px; color: white; }
+    .final-cta-sub { font-size: 13px; color: rgba(255,255,255,0.65); margin-bottom: 36px; line-height: 1.9; }
+    .final-cta .cta-btn { font-size: 16px; padding: 20px 56px; }
+    .final-reassure { margin-top: 20px; font-size: 12px; color: rgba(255,255,255,0.4); }
+
+    footer { background: var(--text); color: rgba(255,255,255,0.4); text-align: center; padding: 32px 20px; font-size: 11px; letter-spacing: 1px; }
+    footer a { color: rgba(255,255,255,0.4); text-decoration: underline; }
+
+    @media (max-width: 600px) {
+      .hero-stats { gap: 24px; }
+      .stat-num { font-size: 24px; }
+      .flow-step:not(:last-child)::after { display: none; }
+      .flow-steps { flex-direction: column; gap: 24px; }
+      .flow-step { padding-bottom: 20px; border-bottom: 1px solid var(--beige); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="inner">
+    <div class="logo">
+      Atelier Soi
+      <span>ATELIER SOI — OMOTESANDO</span>
+    </div>
+    <a href="#final-cta" class="header-cta">無料カウンセリング予約</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">HAIR QUALITY SPECIALIST SALON</div>
+    <h1>アイロンいらずの毎日へ。<br><em>髪質から変える</em>、表参道の専門サロン</h1>
+    <p class="hero-sub">
+      広がり・うねり・ダメージを繰り返している方へ。<br>
+      Atelier Soiは「髪質改善」に特化した完全予約制のプライベートサロンです。<br>
+      30分のカウンセリングから始まる、あなただけのケアプログラム。
+    </p>
+    <div class="hero-img">[IMAGE: サロン内装またはビフォーアフター写真]</div>
+    <a href="#final-cta" class="cta-btn">無料カウンセリングを予約する（LINE）</a>
+    <p class="cta-note">※初回限定・月5名様限定：カウンセリング後のカット無料</p>
+    <div class="hero-stats">
+      <div class="stat-item">
+        <div class="stat-num">4.9</div>
+        <div class="stat-label">Google口コミ評価</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">142件</div>
+        <div class="stat-label">口コミ数</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">87%</div>
+        <div class="stat-label">再来店率</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="problem">
+  <div class="container">
+    <p class="section-label">PROBLEM</p>
+    <h2 class="section-title">こんなお悩み、ありませんか？</h2>
+    <ul class="problem-list">
+      <li>朝のスタイリングに30分以上かかってしまう</li>
+      <li>縮毛矯正をしたのに、すぐ戻ってきてしまう</li>
+      <li>トリートメントを続けているのに、効果を感じられない</li>
+      <li>湿気の多い日は外に出るのが憂鬱になる</li>
+      <li>ヘアケアにお金をかけているのに変わらない</li>
+    </ul>
+    <div class="problem-resolve">
+      <p>
+        それは、<strong>「症状」だけを治療しているから</strong>です。<br>
+        Atelier Soiは、髪の内側から構造を変えることで<br>
+        <strong>繰り返さない髪質</strong>を実現します。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="features">
+  <div class="container">
+    <p class="section-label">WHY CHOOSE US</p>
+    <h2 class="section-title">Atelier Soiが<br>選ばれる3つの理由</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🌿</div>
+        <h3>髪質改善専門サロン</h3>
+        <p>一般メニューは一切行いません。髪質改善・縮毛矯正に集中することで、どこにも負けない技術力を維持しています。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">💬</div>
+        <h3>30分の完全カウンセリング</h3>
+        <p>施術前に必ず30分のカウンセリングを実施。髪の状態・生活習慣・理想の仕上がりを丁寧にヒアリングします。</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">✨</div>
+        <h3>国産オーガニック薬剤使用</h3>
+        <p>使用薬剤はすべて国産オーガニック。ダメージを最小限に抑えながら、髪本来の美しさを引き出します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="menu">
+  <div class="container">
+    <p class="section-label">MENU &amp; PRICE</p>
+    <h2 class="section-title">料金メニュー</h2>
+    <table class="menu-table">
+      <thead>
+        <tr><th>メニュー</th><th style="text-align:right">料金（税込）</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>髪質改善トリートメント</strong><br><small style="color:#888">ショート〜ミディアム / 施術3〜4時間</small></td>
+          <td class="price">18,000円〜</td>
+        </tr>
+        <tr>
+          <td><strong>縮毛矯正（髪質改善）</strong><br><small style="color:#888">ショート〜ミディアム / 施術3〜4時間</small></td>
+          <td class="price">25,000円〜</td>
+        </tr>
+        <tr>
+          <td><strong>カット</strong><br><small style="color:#888">※髪質改善メニューとの組み合わせも可</small></td>
+          <td class="price">7,000円〜</td>
+        </tr>
+        <tr>
+          <td><strong>カラー</strong><br><small style="color:#888">髪質改善と相性の良い薬剤を使用</small></td>
+          <td class="price">12,000円〜</td>
+        </tr>
+        <tr>
+          <td><strong>ハイライト</strong><br><small style="color:#888">ご相談の上、最適なプランをご提案</small></td>
+          <td class="price">15,000円〜</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="menu-offer">
+      <h3>✦ 初回限定オファー ✦</h3>
+      <p>無料カウンセリング後のカット、<strong>無料</strong></p>
+    </div>
+  </div>
+</section>
+
+<section class="voice">
+  <div class="container">
+    <p class="section-label">CUSTOMER VOICE</p>
+    <h2 class="section-title">お客様の声</h2>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">縮毛矯正をいろんなサロンでやってきましたが、ここが一番自然に仕上がりました。3ヶ月経っても全然うねりが戻らず、毎朝のスタイリングが10分で終わるようになりました。</p>
+        <p class="voice-author">30代 / 会社員 女性【仮定】</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">カウンセリングが丁寧で、今まで誰にも相談できなかった髪の悩みを全部話せました。施術後は本当に別人みたいで、友人にも褒められ続けています。</p>
+        <p class="voice-author">28歳 / フリーランス 女性【仮定】</p>
+      </div>
+      <div class="voice-card">
+        <div class="voice-stars">★★★★★</div>
+        <p class="voice-text">薬剤がオーガニックというのが決め手でした。敏感肌で頭皮が荒れやすいのに、全く刺激を感じず驚きました。仕上がりのツヤ感も最高です。</p>
+        <p class="voice-author">36歳 / 育休中 女性【仮定】</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MID CTA -->
+<section style="background:var(--cream);padding:48px 0;text-align:center;">
+  <div class="container">
+    <p style="font-size:13px;color:var(--text-light);margin-bottom:16px;">お客様の声を読んで、気になった方へ</p>
+    <a href="#final-cta" class="cta-btn">LINE で無料カウンセリングを予約する</a>
+    <p style="font-size:12px;color:var(--text-light);margin-top:10px;">強引な勧誘は一切ありません。まずはお気軽にどうぞ。</p>
+  </div>
+</section>
+
+<section class="flow">
+  <div class="container">
+    <p class="section-label">HOW TO START</p>
+    <h2 class="section-title">ご予約の流れ</h2>
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="step-num">1</div>
+        <p class="step-title">LINEで予約</p>
+        <p class="step-desc">公式LINEを友達追加し、カウンセリング希望日時をご連絡ください</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">2</div>
+        <p class="step-title">無料カウンセリング</p>
+        <p class="step-desc">30分のカウンセリングで髪の状態を診断。最適なプランをご提案します</p>
+      </div>
+      <div class="flow-step">
+        <div class="step-num">3</div>
+        <p class="step-title">施術・仕上げ</p>
+        <p class="step-desc">丁寧な施術後、ホームケアのアドバイスもお伝えします</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq">
+  <div class="container">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title">よくあるご質問</h2>
+    <div class="faq-list">
+      <div class="faq-item">
+        <p class="faq-q">髪質改善トリートメントと縮毛矯正の違いは何ですか？</p>
+        <p class="faq-a">縮毛矯正はくせやうねりを物理的に矯正する施術です。髪質改善トリートメントは髪の内部構造を整えることで、ダメージを修復しながら扱いやすい状態にする施術です。どちらが向いているかはカウンセリングでご提案します。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">初回の予約はどうすれば良いですか？</p>
+        <p class="faq-a">ページ内のボタンからLINE公式アカウントを友達追加し、「カウンセリング希望」とメッセージをお送りください。ご希望の日時を確認してご予約をお取りします。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">カラーや縮毛矯正の履歴があっても施術できますか？</p>
+        <p class="faq-a">はい、ほとんどの場合施術可能です。ただし、ブリーチ履歴や極端なダメージがある場合は、カウンセリング後にご提案内容が変わることがあります。まずはご相談ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">妊娠中・授乳中でも施術できますか？</p>
+        <p class="faq-a">妊娠中・授乳中のお客様は、安全を最優先に考えてカウンセリングでご状況を詳しく確認します。施術可能なメニューをご提案しますので、まずはご連絡ください。</p>
+      </div>
+      <div class="faq-item">
+        <p class="faq-q">効果はどのくらい持続しますか？</p>
+        <p class="faq-a">髪質改善トリートメントは3〜4ヶ月、縮毛矯正は6ヶ月以上が目安です。ホームケアの方法も丁寧にお伝えするため、持続性の高い仕上がりが多くお客様から喜ばれています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta" id="final-cta">
+  <div class="container">
+    <p class="section-label">RESERVATION</p>
+    <h2 class="final-cta-title">まず、話すだけでいい。<br>無料カウンセリングで、髪のお悩みを聞かせてください。</h2>
+    <p class="final-cta-sub">
+      毎日のスタイリングが楽になった、と感じる日が必ず来ます。<br>
+      Atelier Soiがその第一歩をサポートします。
+    </p>
+    <a href="#" class="cta-btn">LINE で無料カウンセリングを予約する</a>
+    <p class="final-reassure">強引な勧誘は一切ありません。まずはお気軽にどうぞ。</p>
+  </div>
+</section>
+
+<footer>
+  <p>Atelier Soi（アトリエ ソワ）/ 東京都渋谷区（表参道エリア）</p>
+  <p style="margin-top:8px"><a href="#">特定商取引法に基づく表記</a>　|　<a href="#">プライバシーポリシー</a></p>
+  <p style="margin-top:8px">© 2026 Atelier Soi. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
